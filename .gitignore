@@ -16,4 +16,4 @@
 
 # Ignore database settings
 config/database.yml
-
+database.yml
