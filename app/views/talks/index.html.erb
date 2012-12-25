@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
+    <th>Presenters</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
 <% @talks.each do |talk| %>
   <tr>
     <td><%= talk.name %></td>
-    <td><%= talk.description %></td>
+    <td><%= talk.presenters.join(",") %></td>
     <td><%= link_to 'Show', talk %></td>
     <td><%= link_to 'Edit', edit_talk_path(talk) %></td>
     <td><%= link_to 'Destroy', talk, method: :delete, data: { confirm: 'Are you sure?' } %></td>

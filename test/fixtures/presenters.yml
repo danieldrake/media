@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  handle: MyString
+  email: MyString
+  fbook: MyString
+  twitter: MyString
+  linkedin: MyString
+  url: MyString
+  skype: MyString
+  aim: MyString
+  talk: 
+
+two:
+  name: MyString
+  handle: MyString
+  email: MyString
+  fbook: MyString
+  twitter: MyString
+  linkedin: MyString
+  url: MyString
+  skype: MyString
+  aim: MyString
+  talk: 

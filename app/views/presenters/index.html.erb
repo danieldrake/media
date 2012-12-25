@@ -1,0 +1,39 @@
+<h1>Listing presenters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Handle</th>
+    <th>Email</th>
+    <th>Fbook</th>
+    <th>Twitter</th>
+    <th>Linkedin</th>
+    <th>Url</th>
+    <th>Skype</th>
+    <th>Aim</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @presenters.each do |presenter| %>
+  <tr>
+    <td><%= presenter.name %></td>
+    <td><%= presenter.handle %></td>
+    <td><%= presenter.email %></td>
+    <td><%= presenter.fbook %></td>
+    <td><%= presenter.twitter %></td>
+    <td><%= presenter.linkedin %></td>
+    <td><%= presenter.url %></td>
+    <td><%= presenter.skype %></td>
+    <td><%= presenter.aim %></td>
+    <td><%= link_to 'Show', presenter %></td>
+    <td><%= link_to 'Edit', edit_presenter_path(presenter) %></td>
+    <td><%= link_to 'Destroy', presenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Presenter', new_presenter_path %>

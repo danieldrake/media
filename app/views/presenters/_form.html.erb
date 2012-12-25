@@ -1,0 +1,53 @@
+<%= form_for(@presenter) do |f| %>
+  <% if @presenter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@presenter.errors.count, "error") %> prohibited this presenter from being saved:</h2>
+
+      <ul>
+      <% @presenter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :handle %><br />
+    <%= f.text_field :handle %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :fbook %><br />
+    <%= f.text_field :fbook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br />
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin %><br />
+    <%= f.text_field :linkedin %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :skype %><br />
+    <%= f.text_field :skype %>
+  </div>
+  <div class="field">
+    <%= f.label :aim %><br />
+    <%= f.text_field :aim %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,7 @@
 Media::Application.routes.draw do
+  resources :presenters
+
+
   resources :talks
 
 

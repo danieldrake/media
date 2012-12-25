@@ -14,7 +14,6 @@ class TalksController < ApplicationController
   # GET /talks/1.json
   def show
     @talk = Talk.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @talk }
@@ -25,7 +24,6 @@ class TalksController < ApplicationController
   # GET /talks/new.json
   def new
     @talk = Talk.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @talk }

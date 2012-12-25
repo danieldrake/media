@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225002234) do
+ActiveRecord::Schema.define(:version => 20121225015059) do
+
+  create_table "presenters", :force => true do |t|
+    t.string   "name"
+    t.string   "handle"
+    t.string   "email"
+    t.string   "fbook"
+    t.string   "twitter"
+    t.string   "linkedin"
+    t.string   "url"
+    t.string   "skype"
+    t.string   "aim"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "presenters_talks", :id => false, :force => true do |t|
+    t.integer "presenter_id"
+    t.integer "talk_id"
+  end
+
+  add_index "presenters_talks", ["presenter_id", "talk_id"], :name => "index_presenters_talks_on_presenter_id_and_talk_id"
+  add_index "presenters_talks", ["talk_id", "presenter_id"], :name => "index_presenters_talks_on_talk_id_and_presenter_id"
 
   create_table "talks", :force => true do |t|
     t.string   "name"
