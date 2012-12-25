@@ -12,7 +12,11 @@
 <% @talks.each do |talk| %>
   <tr>
     <td><%= talk.name %></td>
-    <td><%= talk.presenters.join(",") %></td>
+    <td>
+      <% talk.peoplelinks.each do |p| %>
+      <a href="<%= p[:link] %>"><%= p[:name] %></a>
+      <% end %>
+    </td>
     <td><%= link_to 'Show', talk %></td>
     <td><%= link_to 'Edit', edit_talk_path(talk) %></td>
     <td><%= link_to 'Destroy', talk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
