@@ -1,15 +1,31 @@
+$color2: #92b83c;
+$color3: #f18a27;
+
+$color1: #1d1f21;
+$color4: #151515;
+$color5: #b194b4;
+$color6: #83a1ba;
+$color7: #eec765;
+$color8: #bf6764;
+$color9: #ce9456;
+
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: white;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+th {
+  color: $color5;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: $color7;
 }
 
 pre {
@@ -19,13 +35,13 @@ pre {
 }
 
 a {
-  color: #000;
+  color: $color8;
   &:visited {
-    color: #666;
+    color: $color8;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: $color6;
+    /* background-color: #000; */
   }
 }
 
