@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @confrence.name %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @confrence.year %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @confrence.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_confrence_path(@confrence) %> |
+<%= link_to 'Back', confrences_path %>

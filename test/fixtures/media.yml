@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mode: MyString
+  data: MyString
+  talk: 
+  confrence: 
+
+two:
+  mode: MyString
+  data: MyString
+  talk: 
+  confrence: 

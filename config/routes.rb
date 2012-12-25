@@ -1,6 +1,12 @@
 Media::Application.routes.draw do
-  resources :presenters
 
+  get "video/:id" => 'video#show'
+
+  resources :media
+
+  resources :confrences
+
+  resources :presenters
 
   resources :talks
 

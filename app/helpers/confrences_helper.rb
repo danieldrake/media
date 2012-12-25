@@ -1,0 +1,2 @@
+module ConfrencesHelper
+end

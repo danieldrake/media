@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225015059) do
+ActiveRecord::Schema.define(:version => 20121225234200) do
+
+  create_table "confrences", :force => true do |t|
+    t.string   "name"
+    t.integer  "year"
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "media", :force => true do |t|
+    t.string   "mode"
+    t.string   "data"
+    t.integer  "talk_id"
+    t.integer  "confrence_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "length"
+  end
+
+  add_index "media", ["confrence_id"], :name => "index_media_on_confrence_id"
+  add_index "media", ["talk_id"], :name => "index_media_on_talk_id"
 
   create_table "presenters", :force => true do |t|
     t.string   "name"

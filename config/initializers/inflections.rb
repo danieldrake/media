@@ -13,3 +13,9 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+# without this, rails uses "medium" as the plural
+# oh apparently this doesn't work, fine...
+#ActiveSupport::Inflector.inflections do |inflect|
+#	inflect.plural "media","medias"
+#end

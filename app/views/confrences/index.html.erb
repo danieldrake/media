@@ -1,0 +1,27 @@
+<h1>Listing confrences</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @confrences.each do |confrence| %>
+  <tr>
+    <td><%= confrence.name %></td>
+    <td><%= confrence.year %></td>
+    <td><%= confrence.location %></td>
+    <td><%= link_to 'Show', confrence %></td>
+    <td><%= link_to 'Edit', edit_confrence_path(confrence) %></td>
+    <td><%= link_to 'Destroy', confrence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Confrence', new_confrence_path %>
