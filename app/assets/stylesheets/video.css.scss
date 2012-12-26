@@ -1,3 +1,47 @@
 // Place all the styles related to the video controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#sidebar {
+	margin-top:2px; /* This is correcting a visual difference WHICH IS NOT REAL */
+	float: right;
+	width: 230px;
+}
+
+/* Dusty: 90A959,83a1ba,bf6764,b194b4; */
+
+.class1 {
+	background-color: #90A959;
+}
+
+.class2 {
+	background-color: #83a1ba;
+}
+
+.class3 {
+	background-color: #AC4142;
+}
+
+.class4 {
+	background-color: #AA759F;
+}
+
+#sidebar ul, li {
+	list-style-type: none;
+	color: white;
+	margin: 0px 0px 15px 0px;
+	padding: 0px;
+	font-size: 20px;
+}
+
+#sidebar li {
+	height: 30px;
+	width: 230px;
+	display: block;
+	padding: 10px 0px 0px 10px;
+}
+
+#watch {
+	float:left;
+	width: 650px;
+}
