@@ -8,7 +8,7 @@
 /.bundle
 
 # The tools have mysql data
-/tools/*.*
+/tools
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
