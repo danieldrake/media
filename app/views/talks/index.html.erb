@@ -11,7 +11,7 @@
 
 <% @talks.each do |talk| %>
   <tr>
-    <td><%= talk.name %></td>
+    <td><a href="/video/<%= talk[:id] %>" class="video-links"><%= talk.name %></a></td>
     <td>
       <% talk.peoplelinks.each do |p| %>
       <a href="<%= p[:link] %>"><%= p[:name] %></a>

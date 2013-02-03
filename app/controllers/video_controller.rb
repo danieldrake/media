@@ -2,7 +2,8 @@ class VideoController < ApplicationController
   def show
   	@video = Medium.find(params[:id])
 
-  	if @video[:mode] == "wistia" then
+  	case @video[:mode] 
+    when "wistia"
   		@block = "<div id=\"wistia_#{@video[:data]}\" class=\"wistia_embed\" style=\"width:640px;height:480px;\" data-video-width=\"640\" data-video-height=\"480\">&nbsp;</div>
 				<script charset=\"ISO-8859-1\" src=\"http://fast.wistia.com/static/concat/E-v1.js\"></script>
 				<script>

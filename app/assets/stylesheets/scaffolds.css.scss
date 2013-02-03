@@ -9,6 +9,14 @@ $color7: #eec765;
 $color8: #bf6764;
 $color9: #ce9456;
 
+.video-links, .video-links a {
+  color: $color7 !important;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 body {
   background-color: #333;
   color: white;
