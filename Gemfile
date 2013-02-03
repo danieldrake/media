@@ -5,8 +5,13 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+# switching to postgreSQL because heroku prefers it
+# gem 'mysql2'
+gem 'pg'
 
+# alternative to therubyracer (which requires node.js be installed on the local system)
+# sudo apt-get install python-software-properties python g++ make
+# sudo apt-get install nodejs npm
 gem 'execjs'
 
 # Gems used only for assets and not required
