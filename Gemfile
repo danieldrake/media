@@ -7,8 +7,7 @@ gem 'rails', '3.2.9'
 
 gem 'mysql2'
 
-# Not sure what this does, but they seem to be required
-gem 'therubyracer'
+gem 'execjs'
 
 # Gems used only for assets and not required
 # in production environments by default.
