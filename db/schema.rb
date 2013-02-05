@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225234200) do
+ActiveRecord::Schema.define(:version => 20130205223751) do
 
   create_table "confrences", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20121225234200) do
     t.integer  "height"
     t.integer  "width"
     t.integer  "length"
+    t.string   "type"
+    t.integer  "size"
   end
 
   add_index "media", ["confrence_id"], :name => "index_media_on_confrence_id"
