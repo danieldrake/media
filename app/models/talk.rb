@@ -10,11 +10,14 @@ class Talk < ActiveRecord::Base
   def peoplelinks
   	links = Array.new
   	presenters.each do |p|
-  		if p[:handle].length > 1 then
+  		if p[:handle] && p[:name] then
   			name = "#{p[:name].split(" ")[0]} \"#{p[:handle]}\" #{p[:name].split(" ")[1]}"
   		else
-  			name = p[:name]
-  		end
+  			
+        if p[:handle] then name = p[:handle] end
+        if p[:name] then name = p[:name] end
+  		
+      end
 
   		links.push(:name => name, :link => "presenters/#{p[:id]}")
   	end
