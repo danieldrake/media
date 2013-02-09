@@ -2,7 +2,7 @@ class VideoController < ApplicationController
   def show
   	@video = Medium.find_by_talk_id(params[:id])
 
-    if @video[:kind] == "video" then
+    #if @video[:kind] == "video" then
 
     	case @video[:mode] 
       when "wistia"
@@ -23,7 +23,7 @@ class VideoController < ApplicationController
     		@block = "Video mode #{@video[:mode]} is not yet supported. Please contact your network administrator."
     	end
 
-    end
+    #end
 
     unless @block then @block = "unknown error has occured. Please contact your network administrator." end
 
