@@ -25,6 +25,8 @@ class VideoController < ApplicationController
 
     end
 
+    unless @block then @block = "unknown error has occured. Please contact your network administrator."
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @video }
