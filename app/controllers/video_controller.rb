@@ -1,6 +1,6 @@
 class VideoController < ApplicationController
   def show
-  	@video = Medium.find(params[:id])
+  	@video = Medium.find_by_talk_id(params[:id])
 
   	case @video[:mode] 
     when "wistia"

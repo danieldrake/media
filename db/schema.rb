@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208021102) do
+ActiveRecord::Schema.define(:version => 20130209013554) do
 
   create_table "confrences", :force => true do |t|
     t.string   "name"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20130208021102) do
     t.integer  "height"
     t.integer  "width"
     t.integer  "length"
-    t.string   "type"
+    t.string   "kind"
     t.integer  "size"
   end
 
