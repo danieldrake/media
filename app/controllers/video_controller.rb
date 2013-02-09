@@ -25,7 +25,7 @@ class VideoController < ApplicationController
 
     end
 
-    unless @block then @block = "unknown error has occured. Please contact your network administrator."
+    unless @block then @block = "unknown error has occured. Please contact your network administrator." end
 
     respond_to do |format|
       format.html # show.html.erb
