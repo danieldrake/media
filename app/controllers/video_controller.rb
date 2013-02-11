@@ -18,13 +18,17 @@ class VideoController < ApplicationController
   				  controlsVisibleOnLoad: true
   				});
   				</script>"
-      #when "deeplink"
-        #@block = "ugh..."
+      when "deeplink"
+        @block = "<video controls>
+          <source src=\"#{video[:data]}\">
+          </video>"
     	else
     		@block = "Video mode #{video[:mode]} is not yet supported. Please contact your network administrator."
     	end
 
     unless @block then @block = "I didn't get any data from the video controller. Please contact your network administrator." end
+
+    @description = Talk.find_by_id(params[:id])[:description]
 
     respond_to do |format|
       format.html # show.html.erb
